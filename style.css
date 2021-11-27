@@ -10,17 +10,54 @@
 
 label[class = "bread"]::before{
     display: inline-block;
-    width: 20px;
-    height: 20px;
-    content: "";
+    width: 1.3vw;
+    height: 1.3vw;
     background: url("burguer.png") no-repeat 0 0;
+    content: "";
     background-size: 100%;
-    filter: grayscale(100%);
+    visibility: hidden;
 }
+
+label[class = "salad"]::before{
+    display: inline-block;
+    width: 1.3vw;
+    height: 1.3vw;
+    background: url("salad.png") no-repeat 0 0;
+    content: "";
+    background-size: 100%;
+    visibility: hidden;   
+}
+
+label[class = "cheese"]::before{
+    display: inline-block;
+    width: 1.3vw;
+    height: 1.3vw;
+    background: url("cheese.png") no-repeat 0 0;
+    content: "";
+    background-size: 100%;
+    visibility: hidden;   
+}
+
 input:checked + label::before{
-    filter: grayscale(50%);
+    filter: grayscale(0%);
+    visibility: visible;
 }
 
 label:hover::before{
     filter: grayscale(0%);
+    visibility: visible;
 }
+
+
+form > fieldset > div{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: baseline;
+    flex-shrink: 0;
+}
+
+*::selection {
+    color: red;
+    background: yellow;
+  }

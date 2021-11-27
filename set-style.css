@@ -13,10 +13,7 @@
     --font-nav: clamp(0.8em, calc(2.5vw - 0.3em), 1.5em);
 }
 
-
-
 /* Estilizando o Header */
-
 header{
     position: fixed;
     width: 100%;
@@ -50,16 +47,36 @@ header > nav > ul{
 /* Estilizando o form */
 form{
     display: flex;
-    font-family: 'McLaren', cursive;
-    font-size: 1.8em;
+    flex-direction: column;
 }
 
+form > fieldset{
+    display: flex;
+    font-family: 'McLaren', cursive;
+    font-size: 1.8em;
+    margin-top: 5%;
+    justify-content: space-around;
+    color: black;
+}
+form > fieldset > select{
+    font-family: 'McLaren', cursive;
+    font-size: 1em;
+    margin-top: 0.5%;
+    background-color: rgba(0, 0, 0, 0);
+    height: 90%;
+}
 input{
     visibility: hidden;
 }
 
-form > div{
-    display: flex;
-    flex-direction: column;
-    align-items: baseline;
+input[type = "button"]{
+    font-family: 'Lobster', cursive;
+    font-size: 1.8em;
+    visibility: visible;
+    align-self: center;
+    border-radius: 0.5vw;
+    width: 14vw;
+    height: 8vh;
+    margin-top: 4%;
+    background: rgba(255, 255, 255, 0.4);
 }
